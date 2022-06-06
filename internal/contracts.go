@@ -3,20 +3,21 @@ package internal
 import (
 	"context"
 	"encoding/hex"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/rs/zerolog/log"
 	"io/ioutil"
 	"math/big"
 	"os"
 	"strconv"
 	"strings"
 	"sync"
+
+	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/ethereum/go-ethereum/params"
+	"github.com/rs/zerolog/log"
 )
 
-func DisasmContractsEVM(outDir string) {
+func DisasmContractsEVM(outDir string, userEvmPath string) {
 
-	evmPath := "/usr/local/bin/evm"
+	evmPath := userEvmPath
 
 	files, err := ioutil.ReadDir(outDir)
 	if err != nil {
@@ -58,7 +59,7 @@ func DisasmContractsEVM(outDir string) {
 
 }
 
-func DownloadContractsEVM(server string, start int64, end int64, balance float64, concurrency int) {
+func DownloadContractsEVM(server string, start int64, end int64, balance float64, concurrency int, printOnly bool) {
 
 	client, err := ethclient.Dial(server)
 	if err != nil {
@@ -144,7 +145,10 @@ func DownloadContractsEVM(server string, start int64, end int64, balance float64
 								// debug
 								log.Debug().Msg(hex.EncodeToString(bytecode))
 								// write evm hex string to file
-								WriteHexToFile(transaction.ContractAddress.String(), hex.EncodeToString(bytecode))
+								if !printOnly {
+									WriteHexToFile(transaction.ContractAddress.String(), hex.EncodeToString(bytecode))
+
+								}
 								log.Info().Msg("----------------------------------------------")
 							}
 						} else {
@@ -156,7 +160,9 @@ func DownloadContractsEVM(server string, start int64, end int64, balance float64
 							// debug
 							log.Debug().Msg(hex.EncodeToString(bytecode))
 							// write evm hex string to file
-							WriteHexToFile(transaction.ContractAddress.String(), hex.EncodeToString(bytecode))
+							if !printOnly {
+								WriteHexToFile(transaction.ContractAddress.String(), hex.EncodeToString(bytecode))
+							}
 							log.Info().Msg("----------------------------------------------")
 
 						}

@@ -24,6 +24,7 @@ ChainWalker is a smart contract and scraper which uses RCP/IPC calls to extract 
 ## Usage 
 [Download](https://github.com/0xsha/ChainWalker/releases/tag/v1.0.3) the artifact for your distro from the release section, execute it and follow the usage guide.
 
+if you want to use EVM downloader (without ```-p```) option make sure you have EVM installed 
 
 ```
 

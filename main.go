@@ -15,6 +15,7 @@ func main() {
 	startPtr := flag.Int64("s", 14000000, "start block (int)")
 	endPtr := flag.Int64("e", 14010000, "end block (int)")
 	urlPtr := flag.String("u", "https://cloudflare-eth.com", "RCP/IPC endpoint")
+	evmPath := flag.String("ev", "/usr/local/bin/evm", "EVM path")
 	conPtr := flag.Int("c", 1, "concurrency")
 	debugPtr := flag.Bool("d", false, "sets log level to debug")
 	balancePtr := flag.Float64("b", 0, "minimum balance (default 0)")
@@ -46,11 +47,11 @@ func main() {
 	log.Info().Msg(banner)
 
 	// step II : download the contracts from requested blocks
-	internal.DownloadContractsEVM(*urlPtr, *startPtr, *endPtr, *balancePtr, *conPtr)
+	internal.DownloadContractsEVM(*urlPtr, *startPtr, *endPtr, *balancePtr, *conPtr, *printPtr)
 
-	if *printPtr {
+	if !(*printPtr) {
 		// step III : disassemble EVM to opcode
-		internal.DisasmContractsEVM(*outPtr)
+		internal.DisasmContractsEVM(*outPtr, *evmPath)
 	}
 
 }
