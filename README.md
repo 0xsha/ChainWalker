@@ -46,8 +46,29 @@ chainwalker -h
     	RCP/IPC endpoint (default "https://cloudflare-eth.com")
 ```
 
+
+## Demo
+
+
+Extracts contracts with minumum balance of 3 eth 
+
+![chainwalker](./assets/contractsWithoutMinBalance.png)
+
+
+Extracts contracts any balance on given block 
+
+![chainwalker](./assets/contractsWithoutMinBalance.png)
+
+
+
+
+
+## limitation 
+
+- can not directly grab internal contract transactions 
+
 ## Dev 
-clone the repo
+- clone the repo
 go build main.go 
 
 
@@ -60,6 +81,13 @@ If you are using a remote server and the program crashes or gives you an error, 
 - change the node provider 
 - change the block numbers 
 - go with a smaller block distance (between start and end)
-
 - better solution : run you own node and connect to IPC using ``` /root/.ethereum/geth.ipc as -u  (url) ```
 
+
+
+
+
+Credits :
+- eth.wiki
+- core-geth
+- go-Ethereum
