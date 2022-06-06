@@ -93,8 +93,6 @@ If you are using a remote server and the program crashes or gives you an error, 
 
 
 
-
-
 Credits :
 - eth.wiki
 - core-geth
