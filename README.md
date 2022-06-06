@@ -29,7 +29,7 @@ if you want to use EVM downloader (without ```-p```) option make sure you have E
 ```
 
 chainwalker -h
-4:23PM INF ChainWalker 1.0.3-alpha - Usage
+7:50PM INF ChainWalker 1.0.3-alpha - Usage
   -b float
     	minimum balance (default 0)
   -c int
@@ -37,6 +37,8 @@ chainwalker -h
   -d	sets log level to debug
   -e int
     	end block (int) (default 14010000)
+  -ev string
+    	EVM path (default "/usr/local/bin/evm")
   -h	shows usage
   -o string
     	output directory (default "output/")
@@ -81,12 +83,12 @@ go build main.go
 
 ## Troubleshooting 
 If you are using a remote server and the program crashes or gives you an error, here are things you can try. 
-
 - try to lower the concurrency number to as low as 1 
 - make sure you didn't hit the API limits of your provider 
 - change the node provider 
 - change the block numbers 
 - go with a smaller block distance (between start and end)
+- make sure output directory exists in same directory as binary
 - better solution : run you own node and connect to IPC using ``` /root/.ethereum/geth.ipc as -u  (url) ```
 
 
