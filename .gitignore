@@ -1,0 +1,5 @@
+output/
+.idea/
+./main
+dist/
+.vscode/
