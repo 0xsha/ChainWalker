@@ -2,7 +2,7 @@
 
 
 ## What
-ChainWalker is a smart contract and scraper which uses RCP/IPC calls to extract the information. 
+ChainWalker is a smart contract and scraper which uses RCP/IPC calls to extract the information. A small tool that can help us find contracts, extract the EVM code, and disassemble the opcodes. It allows us to select specific blocks or even specific contract balances. 
 
 
 
@@ -58,6 +58,11 @@ Extracts contracts with minumum balance of 3 eth
 Extracts contracts any balance on given block 
 
 ![chainwalker](./assets/contractsWithoutMinBalance.png)
+
+
+without ```-p``` option this is what created output will look like
+
+![chainwalker](./assets/Output.png)
 
 
 
