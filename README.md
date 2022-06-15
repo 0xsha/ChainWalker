@@ -55,7 +55,7 @@ chainwalker -h
 
 Extracts contracts with minumum balance of 3 eth 
 
-![chainwalker](./assets/contractsWithMinBalance.png)
+![chainwalker](./assets/ContractWithMinBalance.png)
 
 
 Extracts contracts any balance on given block 
