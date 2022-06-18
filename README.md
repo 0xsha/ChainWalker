@@ -2,7 +2,7 @@
 
 
 ## What
-[ChainWalker](https://0xsha.io/blog/lets-walk-on-the-chains-creating-a-smart-contract-crawler) is a smart contract and scraper which uses RCP/IPC calls to extract the information. A small tool that can help us find contracts, extract the EVM code, and disassemble the opcodes. It allows us to select specific blocks or even specific contract balances. 
+[ChainWalker](https://0xsha.io/blog/lets-walk-on-the-chains-creating-a-smart-contract-crawler) is a smart scraper which uses RCP/IPC calls to extract the information. A small tool that can help us find contracts, extract the EVM code, and disassemble the opcodes. It allows us to select specific blocks or even specific contract balances. 
 
 
 
