@@ -77,8 +77,9 @@ without ```-p``` option this is what created output will look like
 
 ## Dev 
 - clone the repo
+```
 go build main.go 
-
+```
 
 
 ## Troubleshooting 
