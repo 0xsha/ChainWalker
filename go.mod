@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/ethereum/go-ethereum v1.13.1
-	github.com/rs/zerolog v1.30.0
+	github.com/rs/zerolog v1.31.0
 )
 
 require (
@@ -23,7 +23,7 @@ require (
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/holiman/uint256 v1.2.3 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
-	github.com/mattn/go-isatty v0.0.16 // indirect
+	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/mmcloughlin/addchain v0.4.0 // indirect
 	github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible // indirect
 	github.com/supranational/blst v0.3.11 // indirect
@@ -33,7 +33,7 @@ require (
 	golang.org/x/exp v0.0.0-20230810033253-352e893a4cad // indirect
 	golang.org/x/mod v0.11.0 // indirect
 	golang.org/x/sync v0.3.0 // indirect
-	golang.org/x/sys v0.11.0 // indirect
+	golang.org/x/sys v0.12.0 // indirect
 	golang.org/x/tools v0.9.1 // indirect
 	rsc.io/tmplfunc v0.0.3 // indirect
 )
