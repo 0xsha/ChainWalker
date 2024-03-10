@@ -3,7 +3,7 @@ module github.com/0xsha/ChainWalker
 go 1.17
 
 require (
-	github.com/ethereum/go-ethereum v1.13.12
+	github.com/ethereum/go-ethereum v1.13.14
 	github.com/rs/zerolog v1.32.0
 )
 
